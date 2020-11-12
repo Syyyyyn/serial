@@ -5,10 +5,10 @@ echo Serial port: $COM_PORT.
 printf 'Serial speed [default: 115200] : '
 read -r opt
 
-if [ opt == '' ]
-then SPEED=115200
-else SPEED=opt
+if [ -z "$opt" ]
+then SPEED="115200"
+else SPEED=$opt
 fi
 
-screen -X quit
-screen /dev/$COM_PORT $SPEED
+# screen -X quit
+echo screen /dev/$COM_PORT $SPEED
