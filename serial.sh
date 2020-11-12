@@ -10,5 +10,5 @@ then SPEED="115200"
 else SPEED=$opt
 fi
 
-# screen -X quit
-echo screen /dev/$COM_PORT $SPEED
+screen -X quit
+screen /dev/$COM_PORT $SPEED
